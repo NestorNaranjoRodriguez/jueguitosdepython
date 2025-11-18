@@ -31,8 +31,6 @@ def juego_pares_y_nones():
         print("🏆 ¡Gana el Jugador 2!")
     else:
         print("🤝 ¡Empate!")
-    
-    input("\nPulsa ENTER para volver al menú...")
 
 if __name__ == "__main__":
     juego_pares_y_nones()
