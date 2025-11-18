@@ -9,13 +9,16 @@ def mostrar_menu():
     print("1. 🎲 Juego de Azar con Dados")
     print("   Lanza dados, suma puntos y compite contra la suerte.")
     print()
-    print("2. 🦎 Piedra, Papel, Tijera, Lagarto, Spock")
+    print("2. 🪨 Piedra, 📄 Papel, ✂️ Tijera, 🦎 Lagarto, 🖖 Spock")
     print("   ¡La versión épica del clásico! Incluye lagarto y Spock.")
     print()
     print("3. 🐍 Snake")
     print("   Controla una serpiente y come manzanas sin chocar.")
     print()
-    print("4. 🚪 Salir")
+    print("4. 🃏 Blackjack")
+    print("   Juega contra el crupier y intenta acercarte a 21 sin pasarte.")
+    print()
+    print("5. 🚪 Salir")
     print("═" * 55)
 
 def ejecutar_juego(ruta_script, nombre_juego, descripcion):
@@ -45,20 +48,22 @@ def main():
         (2, "pptls.py", "Piedra, Papel, Tijera, Lagarto, Spock", 
          "Versión ampliada del clásico: ahora con reglas de Sheldon Cooper 😎."),
         (3, "snake.py", "Snake", 
-         "Guía a la serpiente para comer manzanas y crecer sin tocar las paredes ni a sí misma.")
+         "Guía a la serpiente para comer manzanas y crecer sin tocar las paredes ni a sí misma."),
+        (4, "blackjack.py", "Blackjack", 
+         "Intenta sumar 21 puntos o acercarte lo más posible sin pasarte. ¡Desafía al crupier!")
     ]
 
     while True:
         mostrar_menu()
 
         try:
-            opcion = int(input("🔹 Elige una opción (1-4): "))
+            opcion = int(input("🔹 Elige una opción (1-5): "))
         except ValueError:
             print("⚠️  Entrada inválida. Por favor, ingresa un número entero.")
             continue
 
         # Procesar la opción elegida
-        if opcion == 4:
+        if opcion == 5:
             print("\n👋 ¡Gracias por jugar! ¡Hasta la próxima aventura! 👋\n")
             break
 
@@ -71,7 +76,7 @@ def main():
                 break
 
         if not juego_encontrado:
-            print("❌ Opción no válida. Por favor, elige 1, 2, 3 o 4.")
+            print("❌ Opción no válida. Por favor, elige 1, 2, 3, 4 o 5.")
 
         # Pausa antes de volver al menú
         input("\n➡️ Presiona Enter para regresar al menú principal...")
