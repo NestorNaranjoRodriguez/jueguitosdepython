@@ -1,0 +1,7 @@
+adivina =  int(input('Adivine mi edad: '))
+edad = 20
+
+if(adivina == edad):
+    print('Felicidades')
+else:
+    print('Fallastes')
